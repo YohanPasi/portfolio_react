@@ -1,8 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Bio} from '../../data/constants'
-import Typewriter from 'typewriter-effect';
-
+import React from "react";
+import styled from "styled-components";
+import { Bio } from "../../data/constants";
+import Typewriter from "typewriter-effect";
+import HeroImg from "../../images/image01.png";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import HeroBgAnimation from "../HeroAnimation";
 
 const HeroContainer = styled.div`
     background-color: ${({theme}) => theme.card_light};
@@ -26,28 +29,56 @@ const HeroContainer = styled.div`
 
 
 const HeroBg = styled.div`
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: end;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    width:100%;
-    height: 100%;
-    padding: 0 30px;
-    -webkit transform: translateX(-50%) yranslateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-
-    @media screen and (mad-width: 960px){
-        padding: 0 0px;
-        justify-content: center;
-    }
-
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  top: 0;
+  right: 0;
+  left: 60%;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  z-index: -1;
 `;
+
+const ParticlesBg = () => {
+  const particlesInit = async (main) => {
+    await loadFull(main); // Load full tsparticles bundle
+  };
+
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      options={{
+        background: {
+          color: { value: "transparent" },
+        },
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 5, random: true },
+          move: { enable: true, speed: 3, random: false, straight: false },
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "repulse" },
+            onClick: { enable: true, mode: "push" },
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { quantity: 4 },
+          },
+        },
+      }}
+    />
+  );
+};
+
 
 const HeroInnerContainer = styled.div`
 
@@ -200,7 +231,30 @@ filter: brightness(1);
 
 `;
 
+const Image = styled.img`
 
+width: 100%;
+height: 100%
+position: relative;
+margin-left: 50%;
+max-width: 400px;
+border-radius: 45%;
+max-height: 500px;
+object-fit: cover;
+object-position: center;
+border: 2px solid ${({theme}) => theme.primary};
+
+@media screen and(max-width: 768px){
+    max-width: 400px;
+    max-height: 400px;
+}
+
+@media screen and(max-width: 640px){
+    max-width: 280px;
+    max-height: 280px;
+}
+
+`;
 
 const Span = styled.div`
 color: ${({theme}) => theme.primary};
@@ -208,38 +262,47 @@ cursor: pointer;
 `;
 
 
-const hero = () => {
+const Hero = () => {
     return (
-    <div id='about'>
+      <div id="about">
         <HeroContainer>
-            <HeroBg></HeroBg>
-            <HeroInnerContainer>
-                <HeroLeftContainer>
-                    <Title>
-                        Hi, I am <br />
-                        {Bio.name}
-                    </Title>
-                    <TextLoop>
-                        I am a
-                        <Span>
-                            <Typewriter
-                            options={{
-                                strings:Bio.roles,
-                                autoStart: true,
-                                loop: true,
-                            }} />
-                        </Span>
-                    </TextLoop>
-                    <SubTitle>{Bio.description}</SubTitle>
-                    <ResumeButton href={Bio.resume} target="display">
-                        Check Resume
-                    </ResumeButton>
-                </HeroLeftContainer>
-                <HeroRightContainer></HeroRightContainer>
-            </HeroInnerContainer>
+          <HeroBg>
+            <HeroBgAnimation />
+            <ParticlesBg /> {/* Add the ParticlesBg component */}
+          </HeroBg>
+  
+          {/* Main Content */}
+          <HeroInnerContainer>
+            <HeroLeftContainer>
+              <Title>
+                Hi, I am <br />
+                {Bio.name}
+              </Title>
+              <TextLoop>
+                I am a
+                <Span>
+                  <Typewriter
+                    options={{
+                      strings: Bio.roles,
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </Span>
+              </TextLoop>
+              <SubTitle>{Bio.description}</SubTitle>
+              <ResumeButton href={Bio.resume} target="_blank" rel="noopener noreferrer">
+                Check Resume
+              </ResumeButton>
+            </HeroLeftContainer>
+            <HeroRightContainer>
+              <Image src={HeroImg} alt="Hero" />
+            </HeroRightContainer>
+          </HeroInnerContainer>
         </HeroContainer>
-    </div>
-    )
-}
-
-export default hero;
+      </div>
+    );
+  };
+  
+  export default Hero;
+  
