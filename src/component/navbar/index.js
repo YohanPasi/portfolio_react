@@ -1,11 +1,11 @@
 import React from "react";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import { Link as LinkR } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { DiCssdeck } from "react-icons/di";
 
 const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.card_light || "#fff"};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -14,17 +14,13 @@ const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-  }
 `;
 
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  z-index: 1;
+  height: 100%; /* Matches the parent height */
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
@@ -35,7 +31,7 @@ const NavLogo = styled(LinkR)`
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary || "#000"};
   text-decoration: none;
   cursor: pointer;
   gap: 8px;
@@ -46,12 +42,12 @@ const MobileIcon = styled.div`
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 50%);
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.text_primary || "#000"};
   }
 `;
 
@@ -60,85 +56,79 @@ const NavItems = styled.ul`
   display: flex;
   gap: 32px;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 const NavLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary || "#000"};
   text-decoration: none;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary || "#007bff"};
   }
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 16px;
+
   @media screen and (max-width: 640px) {
     display: none;
   }
 `;
 
 const GithubButton = styled.button`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  border: 1.8px solid ${({ theme }) => theme.primary || "#007bff"};
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0px 20px;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   height: 40px;
   background: none;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary || "#007bff"};
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.text_light || "white"};
+    background-color: ${({ theme }) => theme.primary || "#007bff"};
+    color: ${({ theme }) => theme.text_light || "#fff"};
   }
 `;
 
 const MobileMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  right: 0;
-  top: 80px;
   position: absolute;
+  top: 80px;
+  right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => `${theme.card_light}99`};
-  transition: all 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  background: ${({ theme }) => `${theme.card_light || "#fff"}cc`};
   border-radius: 0 0 20px 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  opacity: ${({ open }) => (open ? "1" : "0")};
-  z-index: ${({ open }) => (open ? "1" : "-1")};
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: ${({ open }) => (open ? 1 : 0)};
+  transform: translateY(${({ open }) => (open ? "0" : "-20px")});
+  pointer-events: ${({ open }) => (open ? "auto" : "none")};
+  transition: opacity 0.3s ease, transform 0.3s ease;
 `;
 
-const MobileMenuLinks = styled.a`
-  color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
+
+const MobileMenuLinks = styled(NavLink)`
+  display: block;
+  text-align: center;
 `;
 
 const NavBar = () => {
   const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <Nav>
@@ -182,18 +172,14 @@ const NavBar = () => {
           Education
         </MobileMenuLinks>
         <GithubButton
-  style={{
-    backgroundColor: theme.primary,
-    color: theme.text_light,
-  }}
-  onClick={() => window.open("https://github.com/yourusername", "_blank")}
->
-  Github Profile
+          onClick={() => window.open("https://github.com/YohanPasi", "_blank")}
+        >
+          Github Profile
         </GithubButton>
-
       </MobileMenu>
     </Nav>
   );
 };
 
 export default NavBar;
+
