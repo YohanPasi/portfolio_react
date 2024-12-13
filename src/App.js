@@ -9,6 +9,9 @@ import Experience from "./component/Experience/index"
 import { BrowserRouter as  Router } from "react-router-dom";
 import Projects from "./component/Projects";
 import SoftSkills from "./component/SoftSkills";
+import Education from "./component/Education";
+import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -40,13 +43,18 @@ function App() {
       <Body>
         <Hero />
         <Wrapper>
-          <Skills />
-         
+          <Skills />         
           <SoftSkills />
-          <Projects />
-          <Experience />
         </Wrapper>
-      
+        <Wrapper>
+           <Education />
+        </Wrapper> 
+          <Projects />        
+          <Experience />  
+          <Wrapper> 
+          <Contact />
+          </Wrapper>
+          <Footer />   
       </Body>
       </Router>
     </ThemeProvider>

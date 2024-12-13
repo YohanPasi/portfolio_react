@@ -143,40 +143,40 @@ export const Bio = {
       title: "MediCare",
       date: "Jan 2023 - Jun 2023",
       description:
-        "This project, developed during my 1st year, 2nd semester, is an Online Healthcare Management System built using HTML, CSS, and PHP The project demonstrates practical web development skills and the ability to address real-world healthcare needs efficiently.",
+        "This project, developed during my 1st year, 2nd semester, is an Online Healthcare Management System built using HTML, CSS, and PHP. The project demonstrates practical web development skills and the ability to address real-world healthcare needs efficiently.",
       image:
         "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734109890/portfolio/egfgru6g4f44xqgwpa87.webp",
       tags: ["HTML", "CSS", "PHP", "MySQL"],
       category: "web app",
       github: "https://github.com/YohanPasi/healthcare_management",
+      member: [],
     },
-  
     {
       id: 1,
       title: "Vidura De Silva Photography",
       date: "Jan 2023 - Jun 2023",
       description:
-        "Vidura De Silva Photography is a web application created using the MERN stack.I worked on image processing and storage integration.This project highlights my skills in the MERN stack and cloud storage.",
+        "Vidura De Silva Photography is a web application created using the MERN stack. I worked on image processing and storage integration. This project highlights my skills in the MERN stack and cloud storage.",
       image:
         "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734109893/portfolio/qniql5nlde8bbi7r6ssw.webp",
       tags: ["React", "Express.js", "MongoDB", "Node Js", "Azure"],
       category: "web app",
       github: "https://github.com/panchaliSam/ITP-FrontEnd-Photographic-Management-System",
+      member: [], 
     },
-  
     {
       id: 2,
-      title: "Space Shooter ",
+      title: "Space Shooter",
       date: "May 2024 - Jun 2024",
       description:
-        "SpaceShooter is a fun mobile game where you control a spaceship to avoid meteoroids and shoot enemy ships to earn points. The game ends after three hits, and your score is saved using Firebase so you can try to beat it next time.",
+        "Space Shooter is a fun mobile game where you control a spaceship to avoid meteoroids and shoot enemy ships to earn points. The game ends after three hits, and your score is saved using Firebase so you can try to beat it next time.",
       image:
         "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734109892/portfolio/caocurt8ppypwbo2ngb1.webp",
       tags: ["Kotlin", "Java", "Firebase"],
       category: "android app",
       github: "https://github.com/YohanPasi/SpaceShooter",
+      member: [],
     },
-  
     {
       id: 3,
       title: "MemoMate",
@@ -188,16 +188,16 @@ export const Bio = {
       tags: ["Kotlin", "Java", "Firebase"],
       category: "android app",
       github: "https://github.com/YohanPasi/MemoMate",
+      member: [], 
     },
-  
     {
       id: 4,
       title: "Glamoora",
       date: "Dec 2024 - Present",
       description:
-        "Glamora is an online clothing store built with React, Vite, Cloudinary, Tailwind CSS, and MongoDB. Users can browse, select, order, and rate products, while admins manage inventory. The app showcases my skills in full-stack development and e-commerce solutions.",
+        "Glamoora is an online clothing store built with React, Vite, Cloudinary, Tailwind CSS, and MongoDB. Users can browse, select, order, and rate products, while admins manage inventory. The app showcases my skills in full-stack development and e-commerce solutions.",
       image:
-        "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734109891/portfolio/eje5iu0gqglxifz1cml1.webp", // Fixed image URL
+        "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734109891/portfolio/eje5iu0gqglxifz1cml1.webp",
       tags: [
         "React",
         "Vite",
@@ -209,8 +209,10 @@ export const Bio = {
       ],
       category: "web app",
       github: "https://github.com/YohanPasi/glamoora--ECommerce_React",
+      member: [],
     },
   ];
+  
 
   export const softSkills = [
     {
@@ -241,10 +243,30 @@ export const Bio = {
     {
       name: "Leadership",
       description: "Led teams and organized tasks to achieve shared goals.",
-      image: "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734112239/portfolio/swsbtatbp5y7z1jdyngo.png",
+      image: "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734118133/portfolio/pqnuoiwujzeis2o3srmf.png",
     },
   ];
   
+  export const education = [
+    {
+      id: 0,
+      img: "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734118132/portfolio/xmulkp6h6l1vshmx8g5b.png",
+      University: "Sri Lanka Institute of Information Technology",
+      degree: "BSc in Information Technology Specialized in Information Technology",
+      date: "Jun 2022 - Jun 2026",
+      desc: "As a third-year student at SLIIT University, pursuing a degree in Information Technology, I am expanding my expertise in various aspects of IT, including web development, information security, and software engineering. Throughout my studies, I have worked on several projects, gaining hands-on experience with technologies like React, PHP, Kotlin, and cloud services. The program equips me with the skills needed to solve real-world problems, and I am actively applying these skills in both individual and group projects to prepare for a successful career in the IT field",
+      
+    },
+    {
+      id: 1,
+      img: "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734118132/portfolio/m4mwxjfp5j1r9oxggwa9.jpg",
+      school: "R/Dharmaloka Navodya College Pelmadulla",
+      date: "Apr 2019 - Aug 2021",
+      Stream: "Commers",
+      desc: "I prepared for the AL exam, which focused on subjects like Accounting, Information Technology, and Economics. This exam was a key step towards my higher education and career goals.",
+      Examination: "GCE A/L",
+    },
+  ];
   
   export const TimeLineData = [
     { year: 2017, text: "Started my journey" },
