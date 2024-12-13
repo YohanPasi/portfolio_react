@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# My Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio repository! This is where I showcase my skills, experience, and projects as a software developer. The portfolio is built with modern web technologies and serves as a dynamic representation of my professional journey.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🖥️ Tech Stack
 
-### `npm start`
+- **Frontend:** React, Styled Components, Typewriter Effect
+- **Animations:** Custom SVG and CSS Animations
+- **Icons:** Material-UI Icons
+- **Styling:** CSS-in-JS (Styled Components), Responsive Design
+- **Hosting:** (Add hosting I used GitHub Pages)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- **Dynamic Sections:**
+  - Hero Section with Typewriter Effect and Social Media Links
+  - Skill Set, Projects, Experience, and Contact Sections
+- **Responsive Design:** Mobile-friendly layout for all devices
+- **Interactive Animations:** Smooth transitions and hover effects
+- **Resume Download:** Direct link to view or download my resume
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🌟 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```plaintext
+├── public
+├── src
+│   ├── components
+│   │   ├── Footer.js
+│   │   ├── HeroSection.js
+│   │   └── HeroAnimation.js
+│   ├── data
+│   │   └── constants.js
+│   ├── images
+│   ├── styles
+│   └── App.js
+├── package.json
+└── README.md
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Sections Included
 
-### `npm run eject`
+### 1. Hero Section
+- Displays a dynamic typewriter effect for roles
+- Includes a professional photo and a resume link
+- Social media links for easy connectivity
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Projects Section
+- Highlights my best projects with descriptions and links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Skills Section
+- Lists technologies and tools I'm proficient in
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Contact Section
+- Includes a functional contact form powered by EmailJS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎨 Customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Update personal details, roles, and links in `src/data/constants.js`.
+- Replace the `HeroImg` in `src/images` with your own photo.
+- Add your projects in the `Projects` component.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📬 Contact Me
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Portfolio** Live: https://yohanpasi.github.io/yohan.me/
+- **Email:** yohanpasi80253327@gmail.com
