@@ -143,15 +143,16 @@ const NavBar = () => {
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#experience">Experience</NavLink>
+          <NavLink href="#contact">Contact Me</NavLink>
         </NavItems>
         <ButtonContainer>
           <GithubButton
-            onClick={() => window.open("https://github.com/yourusername", "_blank")}
+            onClick={() => window.open("https://github.com/YohanPasi", "_blank")}
           >
-            Github Profile
+            Git hub Profile
           </GithubButton>
         </ButtonContainer>
       </NavContainer>
@@ -170,6 +171,9 @@ const NavBar = () => {
         </MobileMenuLinks>
         <MobileMenuLinks href="#experience" onClick={() => setOpen(false)}>
           Experience
+        </MobileMenuLinks>
+        <MobileMenuLinks href="#contact" onClick={() => setOpen(false)}>
+          Contact Me
         </MobileMenuLinks>
         <GithubButton
           onClick={() => window.open("https://github.com/YohanPasi", "_blank")}

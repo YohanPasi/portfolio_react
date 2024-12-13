@@ -4,6 +4,36 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/image01.png";
 import HeroBgAnimation from "../HeroAnimation";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
+`;
+
+const SocialMediaIcon = styled.a`
+  display: inline-block;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 1.2rem;
+  }
+`;
 
 
 
@@ -210,39 +240,64 @@ const ResumeButton = styled.a`
 
 const HeroSection = () => {
   return (
-      <div id="about">
-          <HeroContainer>
-              <HeroBg>
-                  <HeroBgAnimation />
-              </HeroBg>
-              <HeroInnerContainer >
-                  <HeroLeftContainer id="Left">
-                      <Title>Hi, I am <br /> {Bio.name}</Title>
-                      <TextLoop>
-                          I am a
-                          <Span>
-                              <Typewriter
-                                  options={{
-                                      strings: Bio.roles,
-                                      autoStart: true,
-                                      loop: true,
-                                  }}
-                              />
-                          </Span>
-                      </TextLoop>
-                      <SubTitle>{Bio.description}</SubTitle>
-                      <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
-                  </HeroLeftContainer>
+    <div id="about">
+      <HeroContainer>
+        <HeroBg>
+          <HeroBgAnimation />
+        </HeroBg>
+        <HeroInnerContainer>
+          <HeroLeftContainer id="Left">
+            <Title>
+              Hi, I am <br /> {Bio.name}
+            </Title>
+            <TextLoop>
+              I am a
+              <Span>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Span>
+            </TextLoop>
+            <SubTitle>{Bio.description}</SubTitle>
+            <div>
+              <ResumeButton href={Bio.resume} target="display">
+                Check Resume
+              </ResumeButton>
+              <SocialMediaIcons>
+                {Bio.facebook && (
+                  <SocialMediaIcon href={Bio.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <FacebookIcon />
+                  </SocialMediaIcon>
+                )}
+                {Bio.linkedin && (
+                  <SocialMediaIcon href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <LinkedInIcon />
+                  </SocialMediaIcon>
+                )}
+                {Bio.instagram && (
+                  <SocialMediaIcon href={Bio.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <InstagramIcon />
+                  </SocialMediaIcon>
+                )}
+                {Bio.twitter && (
+                  <SocialMediaIcon href={Bio.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <TwitterIcon />
+                  </SocialMediaIcon>
+                )}
+              </SocialMediaIcons>
+            </div>
+          </HeroLeftContainer>
+          <HeroRightContainer id="Right">
+            <Img src={HeroImg} alt="hero-image" />
+          </HeroRightContainer>
+        </HeroInnerContainer>
+      </HeroContainer>
+    </div>
+  );
+};
 
-                  <HeroRightContainer id="Right">
-
-                      <Img src={HeroImg} alt="hero-image" />
-                  </HeroRightContainer>
-              </HeroInnerContainer>
-
-          </HeroContainer>
-      </div>
-  )
-}
-
-export default HeroSection
+export default HeroSection;
