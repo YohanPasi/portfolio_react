@@ -162,19 +162,19 @@ const NavBar = () => {
         <MobileMenuLinks href="#skills" onClick={() => setOpen(false)}>
           Skills
         </MobileMenuLinks>
-        <MobileMenuLinks href="#experience" onClick={() => setOpen(false)}>
-          Experience
+        <MobileMenuLinks href="#education" onClick={() => setOpen(false)}>
+          Education
         </MobileMenuLinks>
         <MobileMenuLinks href="#projects" onClick={() => setOpen(false)}>
           Projects
         </MobileMenuLinks>
-        <MobileMenuLinks href="#education" onClick={() => setOpen(false)}>
-          Education
+        <MobileMenuLinks href="#experience" onClick={() => setOpen(false)}>
+          Experience
         </MobileMenuLinks>
         <GithubButton
           onClick={() => window.open("https://github.com/YohanPasi", "_blank")}
         >
-          Github Profile
+          Git hub Profile
         </GithubButton>
       </MobileMenu>
     </Nav>
