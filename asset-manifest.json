@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/yohan.me/static/css/main.bf538fe7.css",
-    "main.js": "/yohan.me/static/js/main.db607476.js",
+    "main.js": "/yohan.me/static/js/main.a2f9d0cd.js",
     "static/media/image01.png": "/yohan.me/static/media/image01.7c2a784272f312311b5a.png",
     "index.html": "/yohan.me/index.html",
     "main.bf538fe7.css.map": "/yohan.me/static/css/main.bf538fe7.css.map",
-    "main.db607476.js.map": "/yohan.me/static/js/main.db607476.js.map"
+    "main.a2f9d0cd.js.map": "/yohan.me/static/js/main.a2f9d0cd.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.db607476.js"
+    "static/js/main.a2f9d0cd.js"
   ]
 }
