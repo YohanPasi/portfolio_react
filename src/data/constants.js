@@ -262,7 +262,7 @@ export const Bio = {
       img: "https://res.cloudinary.com/dyxpeyv1n/image/upload/v1734118132/portfolio/m4mwxjfp5j1r9oxggwa9.jpg",
       school: "R/Dharmaloka Navodya College Pelmadulla",
       date: "Apr 2019 - Aug 2021",
-      Stream: "Commers",
+      Stream: "Commerce",
       desc: "I prepared for the AL exam, which focused on subjects like Accounting, Information Technology, and Economics. This exam was a key step towards my higher education and career goals.",
       Examination: "GCE A/L",
     },
