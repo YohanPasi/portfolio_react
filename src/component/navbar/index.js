@@ -104,13 +104,12 @@ const GithubButton = styled.button`
 
 const MobileMenu = styled.div`
   position: absolute;
+  color: ${({ theme }) => theme.primary || "#007bff"};
   top: 80px;
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => `${theme.card_light || "#fff"}cc`};
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 16px;

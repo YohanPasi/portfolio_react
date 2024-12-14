@@ -12,6 +12,8 @@ const Container = styled.div`
     align-items: center;
     padding: 50px 0px;
     @media (max-width: 960px) {
+        padding: 20px 0px;
+        font-size: 10px;
         padding: 0px;
     }
 `;
@@ -49,9 +51,10 @@ const Desc = styled.div`
     text-align: center;
     max-width: 600px;
     color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
+    @media (max-width: 50px) {
         margin-top: 12px;
-        font-size: 16px;
+        align-items: ceneter;
+        font-size: 14px;
     }
 `;
 
@@ -102,6 +105,10 @@ const CardTitle = styled.h3`
   font-size: 24px;
   margin: 10px 0;
   font-weight: bold;
+
+  @media(max-width: 768px){
+    font-size: 19px;
+  }
 `;
 
 const CardDescription = styled.p`

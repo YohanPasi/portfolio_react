@@ -10,6 +10,7 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
+
 `;
 
 const Wrapper = styled.div`

@@ -231,9 +231,11 @@ const ResumeButton = styled.a`
     }    
     
     
-    @media (max-width: 640px) {
+    @media (max-width: 540px) {
+        font-size: 16px;
+        width: 120px;        
         padding: 12px 0;
-        font-size: 18px;
+        font-size: 12px;
     } 
 
 `;
